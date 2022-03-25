@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: manjorno.azurecr.io/frontend
+        imagePullPolicy: Always
+        env:
+        - name: REACT_APP_KEYCLOAK_URL
+          value: "http://52.142.38.205/auth"
+        - name: REACT_APP_API_URL
+          value: http://52.234.161.164/api
+        ports:
+        - containerPort: 3000
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+spec:
+  selector:
+    app: frontend
+  ports:
+  - port: 3000
+    targetPort: 3000

@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import MainPageCustomer from './components/CustomerSide/MainPage.js';
+import MainPageBusiness from './components/BusinessSide/MainPage.js'
+import RestaurantManagement from './components/BusinessSide/Management/RestaurantManagement.js';
+import RegisterBusiness from './components/BusinessSide/BusinessSelector/RegisterBusiness.js';
+import axios from 'axios';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { KeycloakProvider } from './components/Axios&Keycloak/KeycloakProvider.js';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<KeycloakProvider />}>
+          <Route path="/" element={<MainPageCustomer />} />
+          <Route path="business" element={<MainPageBusiness />} />
+          <Route path="restaurantManagement" element={<RestaurantManagement />} />
+          <Route path='businessCreate' element={<RegisterBusiness />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

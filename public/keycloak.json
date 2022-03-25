@@ -1,0 +1,10 @@
+{
+    "realm": "Manjorno",
+    "auth-server-url": "http://52.142.38.205/auth/",
+    "ssl-required": "none",
+    "resource": "client-app",
+    "public-client": true,
+    "verify-token-audience": true,
+    "use-resource-role-mappings": true,
+    "confidential-port": 0
+  }
