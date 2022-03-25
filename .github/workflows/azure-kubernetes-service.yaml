@@ -2,9 +2,9 @@ name: Deploy to Azure AKS
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 env:
   REGISTRY_NAME: manjorno
