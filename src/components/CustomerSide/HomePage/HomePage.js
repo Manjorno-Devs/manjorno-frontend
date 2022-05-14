@@ -4,9 +4,12 @@ import { useEffect, useState } from 'react';
 
 import RestaurantSearch from './components/RestaurantsSearch.js';
 import RestaurantRegexSearchPage from './components/RestaurantsRegexSearchPage.js';
-import RestaurantPage from './components/RestaurantPage.js'
+import RestaurantPage from './components/RestaurantPage.js';
+import './HomePage.css';
+import { Image } from '@mui/icons-material';
 
 const HomePage = () => {
+
   const [axiosError, setAxiosError] = useState(false);
   const [searchQuery, setSearchQuery] = useState();
   const [restaurants, setRestaurants] = useState([]);
@@ -15,7 +18,6 @@ const HomePage = () => {
   const [selectedRestaurant, setSelectedRestaurant] = useState();
 
   useEffect(() => {
-
   }, [setRestaurants]);
   const textFieldChangeHandler = (e) => {
     e.preventDefault();
@@ -26,7 +28,6 @@ const HomePage = () => {
       setSearchQuery(e.target.value);
     }
   }
-
   const restaurantSearchHandler = (e) => {
     e.preventDefault();
     axios.get(`${process.env.REACT_APP_API_URL}/restaurants/find`, { params: { name: searchQuery } })
@@ -43,13 +44,15 @@ const HomePage = () => {
     <div style={{ overflow: 'hidden' }}>
       <Header axiosError={axiosError} axiosErrorSetter={setAxiosError} />
       {
+        
         {
+          
           "": <RestaurantSearch setSelectedRestaurant={setSelectedRestaurant} restaurants={restaurants} restaurantSearchHandler={restaurantSearchHandler} textFieldChangeHandler={textFieldChangeHandler} setSearchType={setSearchType} />,
           "regex": <RestaurantRegexSearchPage restaurants={restaurants} />,
           "direct": <RestaurantPage selectedRestaurant={selectedRestaurant} restaurants={restaurants} searchQuery={searchQuery}/>
         }[searchType]
+        
       }
-
 
     </div>
   );

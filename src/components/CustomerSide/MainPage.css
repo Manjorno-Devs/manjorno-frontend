@@ -1,0 +1,15 @@
+/* footer-text */
+.MuiBottomNavigationAction-label{
+    font-family: 'Hero' !important;
+    font-weight: 300 !important;
+    color: #505050;
+  }
+/* footer-icons-color */
+.MuiSvgIcon-root{
+  color: #505050;
+}
+
+/* footer-color */
+.MuiBottomNavigation-root{
+  background-color: #FFC624 !important;
+}

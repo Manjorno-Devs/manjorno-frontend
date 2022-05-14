@@ -7,9 +7,9 @@ on:
     branches: [ master ]
 
 env:
-  REGISTRY_NAME: manjorno
+  REGISTRY_NAME: manjorno1
   CLUSTER_NAME: Manjorno
-  RESOURCE_GROUP: Manjorno_group
+  RESOURCE_GROUP: Manjorno
   NAMESPACE: frontend
   REPOSITORY_NAME: frontend
   

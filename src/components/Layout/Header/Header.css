@@ -1,9 +1,32 @@
 .Header {
     background-color: green;
-    
 }
 
 .Title {
     color: white;
     font-size: 1.5em;
+}
+
+p{
+    font-family: 'Hero' !important;
+    font-weight: 500 !important;
+    color: #505050 !important;
+}
+
+/* header-color */
+.MuiToolbar-root{
+    background-color: #FFC624;
+    font-family: 'Hero' !important;
+    font-weight: 300 !important;
+}
+
+.MuiTypography-h5{
+    font-family: 'Hero' !important;
+    font-weight: 300 !important;
+    font-size: 1.7em !important;
+    color: #FFFBF1;
+}
+
+a{
+    color: #DB3069 !important;
 }

@@ -1,13 +1,35 @@
+@font-face {
+  font-family: 'Hero';
+  src: url(/src/Fonts/hero-bold-webfont.woff);
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Hero';
+  src: url(/src/Fonts/hero-regular-webfont.woff);
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Hero';
+  src: url(/src/Fonts/hero-light-webfont.woff);
+  font-weight: 100;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Hero'!important;
+  font-weight: 300 !important;
+  color:#2E2E2E;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Hero'!important;
+  font-weight: 300 !important;
+}
+h1, h2, h3, h4, h5, h6, p{
+  font-family: 'Hero'!important;
+  font-weight: 300 !important;
+}
+
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+  color:#DB3069 !important;
+  text-decoration: underline !important;
 }

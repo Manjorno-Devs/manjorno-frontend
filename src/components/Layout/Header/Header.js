@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import { AppBar, Button, Toolbar, Typography, Alert, Collapse, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import './Header.css'
-
+import './Header.css';
 
 import Modal from '../Modal/Modal.js';
 import Backdrop from '../Backdrop/Backdrop.js';
+import { Image } from '@mui/icons-material';
 
 const Header = (props) => {
 
     return (
         <AppBar>
             <Toolbar>
-                <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+                <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} >
                     Manjorno
                 </Typography>
             </Toolbar>
@@ -38,8 +38,8 @@ const Header = (props) => {
             </Collapse>
         </AppBar>
     );
+    
 }
-
 
 
 export default Header;

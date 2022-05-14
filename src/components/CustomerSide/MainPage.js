@@ -7,6 +7,7 @@ import { useEffect, useState, React } from 'react';
 import { Home, Store, AccountCircle, Restore, NavigateBefore } from '@mui/icons-material';
 import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
 import Keycloak from 'keycloak-js';
+import './MainPage.css';
 
 // import { useNavigate } from "react-router-dom";
 
@@ -22,12 +23,15 @@ const MainPage = () => {
                     "orders": <Orders />,
                     "business": <RedirectToManagement />,
                     "account": <Account />
+                    
                 }[page]
             }
-            <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+            <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, }} elevation={3}>
                 <BottomNavigation
                     showLabels
                     bgcolor='white'
+
+                backgroundColor={'red'}
                     onChange={(event, value) => {
                         setPage(value);
                     }}

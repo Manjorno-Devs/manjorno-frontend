@@ -14,13 +14,13 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: manjorno.azurecr.io/frontend
+        image: manjorno1.azurecr.io/frontend
         imagePullPolicy: Always
         env:
         - name: REACT_APP_KEYCLOAK_URL
-          value: "http://52.142.38.205/auth"
+          value: http://20.90.169.171:8080/auth
         - name: REACT_APP_API_URL
-          value: http://52.234.161.164/api
+          value: http://f415261d427547c9884b.uksouth.aksapp.io/api
         ports:
         - containerPort: 3000
 

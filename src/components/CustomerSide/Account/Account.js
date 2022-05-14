@@ -73,7 +73,8 @@ const Account = (props) => {
                 position="relative"
                 justifyContent="center"
                 top="0"
-                style={{ minHeight: '100vh' }}
+                style={{ minHeight: '90vh' }}
+                backgroundColor={'#FFFBF1'}
             >
                 <Box
                     display="flex"
@@ -90,7 +91,7 @@ const Account = (props) => {
                     </Avatar>
 
                     <Typography variant="h6" align="center">Hi, {token.name}!</Typography>
-                    <Typography variant="h5" align="center">Change your details</Typography>
+                    <Typography variant="h4" align="center">Change your details</Typography>
 
                 </Box>
                 <Box
@@ -129,7 +130,8 @@ const Account = (props) => {
                 position="relative"
                 justifyContent="center"
                 top="0"
-                style={{ minHeight: '100vh' }}
+                style={{ minHeight: '70vh' }}
+                backgroundColor={'#FFC624'}
             >
                 <Box
                     display="flex"
@@ -137,7 +139,7 @@ const Account = (props) => {
                     justifyContent="center"
                     flexDirection='column'
                 >
-                    <Typography variant="h5" align="center">Update your password</Typography>
+                    <Typography variant="h4" align="center">Update your password</Typography>
                     <form onSubmit={passwordChangeHandler}>
                         <InputLabel>Current Password</InputLabel>
                         <Input required id="currentPass" type="password" onChange={event => setcurrentPassword(event.target.value)} />
@@ -150,7 +152,7 @@ const Account = (props) => {
 
                         <Button style={{ margin: '0 auto', display: "flex" }} type="submit">Reset Password</Button>
                     </form>
-                    <Typography variant="h5" align="center">Update your password</Typography>
+                    <Typography variant="h4" align="center">Update your password</Typography>
                     <form onSubmit={passwordChangeEmailHandler}>
                         <Button style={{ margin: '0 auto', display: "flex" }} type="submit">Reset Password</Button>
                     </form>
